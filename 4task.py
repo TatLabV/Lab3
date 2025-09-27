@@ -1,27 +1,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Создаем матрицу 5x5 со случайными числами от 1 до 10
+#Создаем матрицу 5x5 со случайными числами от 1 до 10
 matrix = np.random.randint(1, 11, size=(5, 5))
 
-# Создаем фигуру
+#Создаем фигуру
 plt.figure(figsize=(8, 6))
 
-# Создаем тепловую карту
-# cmap: цветовая схема ('viridis', 'plasma', 'inferno', 'magma', 'cividis')
+#Создаем тепловую карту
 heatmap = plt.imshow(matrix, cmap='viridis')
 
-# Добавляем цветовую шкалу
+#Добавляем цветовую шкалу
 plt.colorbar(heatmap, label='Значение')
 
-# Добавляем заголовок
+#Добавляем заголовок
 plt.title('Тепловая карта матрицы')
 
-# Добавляем подписи осей
+#Добавляем подписи осей
 plt.xlabel('Столбцы')
 plt.ylabel('Строки')
 
-# Добавляем числа в ячейки
+#Добавляем числа в ячейки
 for i in range(matrix.shape[0]):  # для каждой строки
     for j in range(matrix.shape[1]):  # для каждого столбца
         # Добавляем текст в центр ячейки
@@ -33,5 +32,6 @@ for i in range(matrix.shape[0]):  # для каждой строки
                  ha='center', va='center', 
                  color=text_color, fontsize=12)
 
-# Отображаем график
+#Отображаем график
 plt.show()
+
